@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help Centre - Pexelrap </title>
+    <!-- <link rel="stylesheet" href="help.css"> -->
+    <style>
+        body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px; /* Adjusted max-width for a single column layout */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.section .home-button {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-weight: bolder;
+    background-color: #abe6e1;
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.section .home-button:hover {
+    text-decoration: none;
+    background-color: #5a3232;
+    color:#eee;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+header p {
+    color: #777;
+}
+
+.help-sections {
+    display: block; /* Changed to block for a single column */
+}
+
+.section {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Added margin for spacing between sections */
+}
+
+.section h2 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section li {
+    margin-bottom: 15px;
+}
+
+.section li h3 {
+    color: #333;
+    margin-bottom: 5px;
+    cursor: pointer; /* Indicate it's clickable for FAQ accordion */
+}
+
+.section li .faq-answer {
+    display: none; /* Initially hide FAQ answers */
+    padding-left: 15px;
+    color: #666;
+}
+
+.section li .faq-answer ul {
+    padding-left: 20px;
+}
+
+.section li .faq-answer li {
+    margin-bottom: 10px;
+}
+
+.section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fda85e;
+    color: black;
+    font-weight: 300;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+    color: #777;
+}
+
+footer :hover{
+    color: #ddd;
+}
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  // FAQ Accordion functionality
+  const faqQuestions = document.querySelectorAll('.faq-question');
+
+  faqQuestions.forEach(question => {
+      question.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+      });
+  });
+});
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            
+            <h1>Welcome to Pexelrap Wallpaper Help Centre</h1>
+            <p>Find answers to common questions about Pexelrap wallpapers.</p>
+        </header>
+
+        <section class="help-sections">
+            <div class="section">
+                <h2>Frequently Asked Questions (FAQs)</h2>
+                <ul id="faq-list">
+                    <li>
+                        <h3 class="faq-question">How do I download a wallpaper from Pexelrap?</h3>
+                        <div class="faq-answer">
+                            <p>To download a wallpaper, simply click on the image you like. On the wallpaper's page, you'll find a "Download" button. Click it to see available resolution options and choose the one that suits your device.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="faq-question">What resolutions are available for Pexelrap wallpapers?</h3>
+                        <div class="faq-answer">
+                            <p>We strive to offer a variety of resolutions to fit different screens, including standard desktop, HD (High Definition), Full HD, and mobile-friendly sizes. The available options will be listed on the download page for each wallpaper.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="faq-question">Can I use Pexelrap wallpapers for commercial projects?</h3>
+                        <div class="faq-answer">
+                            <p>The licensing terms for our wallpapers can vary. Please check the specific license information displayed on the wallpaper's page. Some wallpapers may be free for both personal and commercial use, while others might have restrictions.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="faq-question">How do I set a Pexelrap wallpaper as my computer or phone background?</h3>
+                        <div class="faq-answer">
+                            <p>The process depends on your operating system:
+                                <ul>
+                                    <li>**Windows:** Right-click on your desktop, select "Personalize," then "Background." Choose "Picture" and browse to the downloaded wallpaper image.</li>
+                                    <li>**macOS:** Go to "System Preferences," then "Desktop & Screen Saver." Click the "+" button to add the downloaded image folder or drag the image to the left panel. Select the image to set it as your background.</li>
+                                    <li>**Android:** Open the "Settings" app, go to "Display" or "Wallpaper," and choose "Choose new wallpaper." Select the downloaded image from your gallery.</li>
+                                    <li>**iOS:** Open the "Photos" app, select the downloaded image, tap the "Share" icon, and choose "Use as Wallpaper."</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="faq-question">I can't find a specific type of wallpaper on Pexelrap. What should I do?</h3>
+                        <div class="faq-answer">
+                            <p>Try using different keywords in our search bar. Explore our categories (e.g., Abstract, Nature, Animals) or browse through the tags associated with popular wallpapers. We are always adding new wallpapers!</p>
+                        </div>
+                    </li>
+                    <li>
+                        <h3 class="faq-question">Do I need an account to download wallpapers from Pexelrap?</h3>
+                        <div class="faq-answer">
+                            <p>No, you do not need to create an account to browse and download wallpapers from Pexelrap. All our wallpapers are freely available for download.</p>
+                        </div>
+                    </li>
+                </ul>
+                <p><a href="#">View all Pexelrap Wallpaper FAQs</a></p>
+                <a href="/" class="home-button">Home</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Pexelrap Wallpaper. All rights reserved.</p>
+        </footer>
+    </div>
+    <!-- <script src="help.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,127 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px; /* Adjusted max-width for a single column layout */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+
+.section .home-button {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-weight: bolder;
+    background-color: #abe6e1;
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.section .home-button:hover {
+    text-decoration: none;
+    background-color: #5a3232;
+    color:#eee;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    color: #555;
+}
+
+header p {
+    color: #777;
+}
+
+.help-sections {
+    display: block; /* Changed to block for a single column */
+}
+
+.section {
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+    margin-bottom: 20px; /* Added margin for spacing between sections */
+}
+
+.section h2 {
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 8px;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section li {
+    margin-bottom: 15px;
+}
+
+.section li h3 {
+    color: #333;
+    margin-bottom: 5px;
+    cursor: pointer; /* Indicate it's clickable for FAQ accordion */
+}
+
+.section li .faq-answer {
+    display: none; /* Initially hide FAQ answers */
+    padding-left: 15px;
+    color: #666;
+}
+
+.section li .faq-answer ul {
+    padding-left: 20px;
+}
+
+.section li .faq-answer li {
+    margin-bottom: 10px;
+}
+
+.section a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fda85e;
+    color: black;
+    font-weight: 300;
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+    color: #777;
+}
+
+footer :hover{
+    color: #ddd;
+}

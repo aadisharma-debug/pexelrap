@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pexelrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+nav {
+    padding: 2vw 3vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(217, 231, 250, 0.521);
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+}
+
+nav h1 {
+    font-size: 30px;
+}
+
+#navpart-2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#navpart-2 a {
+    text-decoration: none;
+    color: black;
+    z-index: 9;
+    position: relative;
+    font-weight: bold;
+    font-size: large;
+}
+
+#navpart-2 h4 {
+    border: 1px solid #030303dc;
+    margin: 0 7px;
+    color: white;
+    border-radius: 50px;
+    padding: 13px 21px;
+    position: relative;
+    overflow: hidden;
+    transition: all ease 0.4s;
+}
+
+#navpart-2 h4::after {
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#navpart-2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+#navpart-2 h4:hover a {
+    color: white;
+}
+
+#navpart-2 h4 a {
+    color: black;
+    text-decoration: none;
+    position: relative;
+
+    margin-top: 5px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#image-container img {
+    width: 100%;
+    height: 250%;
+    border-radius: 15px;
+}
+
+#image-container {
+    background-color: transparent;
+    column-count: 5;
+    column-gap: 15px;
+    max-width: 1900px;
+    margin: 5px 5px 5px 5px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.486);
+    padding-top: 50px;
+}
+
+.container {
+    width: 1148px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-content {
+    width: 33.3%;
+}
+
+h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.footer-content p {
+    width: 190px;
+    margin: auto;
+    padding: 7px;
+}
+
+.footer-content ul {
+    text-align: center;
+}
+
+.list {
+    padding: 0;
+}
+
+.list li {
+    width: auto;
+    text-align: center;
+    list-style-type: none;
+    padding: 7px;
+    position: relative;
+}
+
+a {
+    color: aliceblue;
+    font-size: 15px;
+}
+
+.list li::before {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 100%;
+    width: 0;
+    height: 2px;
+    background: #f18930;
+    transition-duration: .5s;
+}
+
+.list li:hover::before {
+    width: 70px;
+}
+
+.social-icons li {
+    display: inline-block;
+    text-align: center;
+    padding: 5px;
+}
+
+.social-icons i {
+    color: white;
+    font-size: 25px;
+}
+
+li a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #f18930;
+}
+
+.social-icons i:hover {
+    color: #f18930;
+}
+
+.bottom-bar {
+    background: #f18930;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 0px;
+}
+
+.bottom-bar p {
+    color: #131212;
+    margin: 0;
+    font-size: 16px;
+    padding: 7px;
+}
+
+.bottom-bar p:hover {
+    color: aliceblue;
+}
+    </style>
+
+    <script>
+        
+    </script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">
+            <h1>Pexelrap</h1>
+        </a>
+        <div id="navpart-2">
+            <h4><a href="index.html">Home</a></h4>
+            <h4><a href="#image-container">Explores</a></h4>
+            <h4><a href="#About">About</a></h4>
+            <h4><a href="contact.html">Contact</a></h4>
+        </div>
+    </nav>
+    <main>
+        <div id="image-container">
+            <img src="https://i.pinimg.com/736x/e3/aa/9c/e3aa9ce17ab53f854ec61042b2a3dc1f.jpg" class="clickable-image" alt="car">
+            <img src="https://i.pinimg.com/736x/b9/b4/fd/b9b4fd15f1bed6977f740a47a244b207.jpg" class="clickable-image" alt="monkey">
+            <img src="https://i.pinimg.com/736x/e9/f7/ad/e9f7ade3a08ad72485a2df82bb979780.jpg" class="clickable-image" alt="car">
+            <img src="https://i.pinimg.com/736x/2f/f8/94/2ff89473f2a9f5d214da0fbd3b5da1a5.jpg" class="clickable-image" alt="nature">
+            <img src="https://i.pinimg.com/736x/42/e2/19/42e2198edb6818c943452139daa78e0b.jpg" class="clickable-image" alt="astronaut">
+            <img src="https://i.pinimg.com/736x/cb/a5/24/cba5241c4db2faa1cc1cd7c092ade9a2.jpg" class="clickable-image" alt="Pokémon">
+            <img src="https://i.pinimg.com/736x/cd/8a/4c/cd8a4c40849a591d88e67e6f9d0c1956.jpg" class="clickable-image" alt="Shinchan">
+            <img src="https://i.pinimg.com/736x/d4/39/bc/d439bc70c1fca794dee5599bb11de389.jpg" class="clickable-image" alt="car">
+            <img src="https://i.pinimg.com/736x/a6/9a/f5/a69af552699d6a61dcae15e274ea3563.jpg" class="clickable-image" alt="spiderman">
+            <img src="https://i.pinimg.com/736x/f3/2a/94/f32a943936d178deaebca65a7728c3ab.jpg" class="clickable-image" alt="grook">
+            <img src="https://i.pinimg.com/736x/e8/38/ed/e838ed30e1423fd8f8371a62cf6598b0.jpg" class="clickable-image" alt="astronaut">
+            <img src="https://i.pinimg.com/736x/c4/9f/a3/c49fa3dcaa6d5816de372dcde9cd5a77.jpg" class="clickable-image" alt="doreamon">
+            <img src="https://i.pinimg.com/736x/d7/f4/c5/d7f4c57c0109690b30307bf701d70c26.jpg" class="clickable-image" alt="car">
+            <img src="https://i.pinimg.com/736x/0f/78/6d/0f786d31d3b0efdf98ffea39abba3975.jpg" class="clickable-image" alt="space">
+            <img src="https://i.pinimg.com/736x/b9/ef/6c/b9ef6c4885bf92e7b976e56dd5b93b62.jpg" class="clickable-image" alt="Ironman">
+            <img src="https://i.pinimg.com/736x/c8/e4/d8/c8e4d8ca449614cb137e79d2112bdc2b.jpg" class="clickable-image" alt="nature">
+            <img src="https://i.pinimg.com/736x/55/53/04/55530428b3bd5688cc99751238b65db1.jpg" class="clickable-image" alt="spiderman">
+            <img src="https://i.pinimg.com/736x/b9/4f/85/b94f8565e304265d5f784b6d0cb8eb66.jpg" class="clickable-image" alt="nature">
+            <img src="https://i.pinimg.com/736x/70/47/8e/70478e23f2ddd79d472f65209e976130.jpg" class="clickable-image" alt="car">
+            <img src="https://i.pinimg.com/736x/7d/09/8e/7d098e4ae43d6196b442a4a528cb125d.jpg" class="clickable-image" alt="tom and jerry">
+            <img src="https://i.pinimg.com/736x/dd/76/d4/dd76d43e2b7afe99bbe53cf05c827595.jpg" class="clickable-image" alt="space">
+            <img src="https://i.pinimg.com/736x/1d/ca/cf/1dcacfa2dd991c4790b12f873d7f0e05.jpg" class="clickable-image" alt="sea">
+            <img src="https://i.pinimg.com/736x/f5/20/71/f520717cfc94c22182396e6be793f9f4.jpg" class="clickable-image" alt="car">
+            <img src="https://i.pinimg.com/736x/82/f6/5d/82f65d2298decaa7b73657ae3389df87.jpg" class="clickable-image" alt="Ironman">
+            <img src="https://i.pinimg.com/736x/d9/b4/2b/d9b42b8763db94c4097f7d4b7a67e96f.jpg" class="clickable-image" alt="Pokémon">
+            <img src="https://i.pinimg.com/736x/4d/3f/b9/4d3fb965b714a7dd162e1334c54b5665.jpg" class="clickable-image" alt="captian america">
+            <img src="https://i.pinimg.com/736x/52/f9/7c/52f97cef3cab0058c99ee61a914b49ca.jpg" class="clickable-image" alt="nature">
+            <img src="https://i.pinimg.com/736x/d0/68/10/d06810aca52cffcb1051fca9b0b1323b.jpg" class="clickable-image" alt="car">
+            <img src="https://i.pinimg.com/736x/3c/c1/14/3cc1145e04b71e320c0693475a11129d.jpg" class="clickable-image" alt="Pokémon">
+            <img src="https://i.pinimg.com/736x/49/aa/29/49aa294bd502dbe5c0c3bda92f883e0c.jpg" class="clickable-image" alt="valcano">
+            <img src="https://i.pinimg.com/736x/55/ab/ee/55abee4eb9eaf52213989d030622d426.jpg" class="clickable-image" alt="Pokémon">
+            <img src="https://i.pinimg.com/736x/86/b8/4a/86b84af868c463b2ebaa68c39c19a6dd.jpg" class="clickable-image" alt="doreamon">
+            <img src="https://i.pinimg.com/736x/42/cd/1c/42cd1c8438874695b32ef88f7be0278f.jpg" class="clickable-image" alt="tom">
+            <img src="https://i.pinimg.com/736x/e8/c6/78/e8c6781d0a03959f0125474200649529.jpg" class="clickable-image" alt="rabbit">
+            <img src="https://i.pinimg.com/736x/67/9e/b7/679eb7580d6c6df14f3c6319719897ab.jpg" class="clickable-image" alt="deadpool">
+            <img src="https://i.pinimg.com/736x/ad/6a/b5/ad6ab55e2c63dfd6828dc7b54d944964.jpg" class="clickable-image" alt="cheetah">
+            <img src="https://i.pinimg.com/736x/74/00/4b/74004bd2dfd80c3417c50537d235c7db.jpg" class="clickable-image" alt="bear">
+            <img src="https://i.pinimg.com/736x/7c/39/51/7c395117224efe0aff9177b0fba88654.jpg" class="clickable-image" alt="shinchan">
+        </div>
+    </main>
+    <footer>
+        <div class="container" id="About">
+            <div class="footer-content">
+                <h3>Contact Us</h3>
+                <p>Em@il: info@example.com</p>
+                <p>Phone: +91 11223 34455</p>
+                <p>Address: New Delhi | India</p>
+            </div>
+            <div class="footer-content">
+                <h3>Quick Link</h3>
+                <div class="list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="help.html">Help Center</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </div>
+            </div>
+            <div class="footer-content">
+                <h3>Follow Us</h3>
+                <ul class="social-icons">
+                    <li><a href="#"><i class="ri-facebook-circle-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-twitter-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-instagram-fill"></i></a></li>
+                    <li><a href="#"><i class="ri-linkedin-box-fill"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </footer>
+    <div class="bottom-bar">
+        <p>&copy;2025 Pexelrap. All rights revresed</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

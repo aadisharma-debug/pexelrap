@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Pexelrap</title>
+    <!-- <link rel="stylesheet" href="contact.css"> -->
+     <style>
+     body {
+        font-family: sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+        color: #333;
+        line-height: 1.6;
+      }
+      
+      .container {
+        max-width: 600px;
+        margin: 30px auto;
+        padding: 30px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      
+      header {
+        position: relative;
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 30px;
+      }
+      
+      .home-button {
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        font-weight: bolder;
+        background-color: #abe6e1;
+        color: #333;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 7px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .home-button:hover {
+        text-decoration: none;
+        background-color: #5a3232;
+        color: #eee;
+      }
+      
+      header h1 {
+        margin-bottom: 5px;
+        color: #555;
+      }
+      
+      header p {
+        color: #777;
+      }
+      
+      .authentication-contact-form-section {
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #eee;
+        border-radius: 6px;
+      }
+      
+      .authentication-contact-form-section h2 {
+        color: #555;
+        margin-top: 0;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ddd;
+        padding-bottom: 8px;
+      }
+      
+      .form-group {
+        margin-bottom: 15px;
+      }
+      
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+      }
+      
+      .form-group input[type="text"],
+      .form-group input[type="email"],
+      .form-group textarea {
+        width: calc(100% - 12px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+      }
+      
+      .form-group textarea {
+        resize: vertical;
+      }
+      
+      .submit-button {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background-color 0.3s ease;
+      }
+      
+      .submit-button:hover {
+        background-color: #0056b3;
+      }
+      
+      .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+      
+      .success-message {
+        color: green;
+        font-weight: bold;
+        margin-top: 10px;
+      }
+      
+      footer {
+        text-align: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        background-color: #fda85e;
+        color: black;
+        font-weight: 300;
+        border-top: 1px solid #ddd;
+        border-radius: 4px;
+        margin-top: 30px;
+        color: #777;
+      }
+      
+      footer:hover {
+        color: #faf9f9;
+      }
+      </style>
+
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
+    const nameError = document.getElementById('name-error');
+    const emailError = document.getElementById('email-error');
+    const subjectError = document.getElementById('subject-error');
+    const messageError = document.getElementById('message-error');
+    const formSuccess = document.getElementById('form-success');
+
+    contactForm.addEventListener('submit', function(event) {
+        let isValid = true;
+
+        if (!nameInput.value.trim()) {
+            nameError.textContent = 'Please enter your name.';
+            isValid = false;
+        } else {
+            nameError.textContent = '';
+        }
+
+        if (!emailInput.value.trim()) {
+            emailError.textContent = 'Please enter your email address.';
+            isValid = false;
+        } else if (!isValidEmail(emailInput.value.trim())) {
+            emailError.textContent = 'Please enter a valid email address.';
+            isValid = false;
+        } else {
+            emailError.textContent = '';
+        }
+
+        if (!subjectInput.value.trim()) {
+            subjectError.textContent = 'Please enter the subject of your inquiry.';
+            isValid = false;
+        } else {
+            subjectError.textContent = '';
+        }
+
+        if (!messageInput.value.trim()) {
+            messageError.textContent = 'Please enter your message.';
+            isValid = false;
+        } else {
+            messageError.textContent = '';
+        }
+
+        if (!isValid) {
+            event.preventDefault();
+        } else {
+            console.log('Form submitted successfully!');
+            formSuccess.style.display = 'block';
+            contactForm.reset();
+            setTimeout(() => {
+                formSuccess.style.display = 'none';
+            }, 3000);
+        }
+    });
+
+    function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
+});
+      </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Pexelrap Account & Support Contact</h1>
+            <p>Please fill out the form below to contact Pexelrap support regarding your account or any other inquiries.</p>
+        </header>
+
+        <section class="authentication-contact-form-section">
+            <h2>Account & Support Inquiry</h2>
+            <form id="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <p class="error-message" id="name-error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <p class="error-message" id="email-error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject of your inquiry:</label>
+                    <input type="text" id="subject" name="subject" required>
+                    <p class="error-message" id="subject-error"></p>
+                </div>
+                <div class="form-group">
+                    <label for="message">Your Message:</label>
+                    <textarea id="message" name="message" rows="7" required></textarea>
+                    <p class="error-message" id="message-error"></p>
+                </div>
+                <button type="submit" class="submit-button">Send Message to Pexelrap Support</button>
+                <p class="success-message" id="form-success" style="display:none;">Thank you for your message! The Pexelrap support team will get back to you as soon as possible.</p>
+                <a href="/" class="home-button">Home</a>
+            </form>
+        </section>
+
+        <footer>
+            <p>&copy; 2025 Pexelrap. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- <script src="contact.js"></script> -->
+</body>
+</html>
