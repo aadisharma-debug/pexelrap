@@ -15,6 +15,52 @@ body {
   border-radius: 8px;
 }
 
+nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+nav h1 {
+  font-size: 30px;
+  padding-left: 1em;;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+}
+
+nav h1:hover {
+  color: #f5876b;
+  transition: 0.3s all ease;
+}
+
+#navpart-2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5vw;
+}
+
+#navpart-2 a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+#navpart-2 h4 {
+  margin: 0 7px;
+  padding: 10px 15px;
+}
+
+#navpart-2 h4:hover {
+  background-color: rgba(230, 229, 229, 0.418);
+  border-radius: 50px;
+  transition: 0.4s ease;
+}
+
 header {
   position: relative;
   text-align: center;
@@ -23,25 +69,6 @@ header {
   margin-bottom: 30px;
 }
 
-.home-button {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  font-weight: bolder;
-  background-color: #abe6e1;
-  color: #333;
-  padding: 10px 15px;
-  text-decoration: none;
-  border-radius: 7px;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.home-button:hover {
-  text-decoration: none;
-  background-color: #5a3232;
-  color: #eee;
-}
 
 header h1 {
   margin-bottom: 5px;
@@ -124,15 +151,9 @@ footer {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #fda85e;
-  color: black;
   font-weight: 300;
   border-top: 1px solid #ddd;
   border-radius: 4px;
   margin-top: 30px;
   color: #777;
-}
-
-footer:hover {
-  color: #faf9f9;
 }
